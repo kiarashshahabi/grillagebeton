@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GBA Family – Grillage Beton & Associates</title>
+  <style>
+    :root { --ink:#215350; --bg:#f6f7f8; --card:#ffffff; --muted:#5f6b72; }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: #222; }
+    header { background: linear-gradient(135deg, var(--ink), #113c35); color: white; padding: 2.1rem 1.25rem; }
+    .headwrap { max-width: 1050px; margin: 0 auto; display:flex; align-items:center; gap: 1rem; }
+    .logo { width: 220px; max-width: 55vw; height: auto; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 0.35rem 0.6rem; }
+    .headtxt h1 { margin: 0; font-size: 1.9rem; }
+    .headtxt p { margin: 0.6rem 0 0; opacity: 0.95; line-height: 1.6; max-width: 760px; }
+    @media (max-width: 720px){ .headwrap{ flex-direction: column; align-items: flex-start; } }
+
+    main { max-width: 1050px; margin: 2.25rem auto; padding: 0 1.25rem 2.5rem; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 920px){ .grid { grid-template-columns: 1.1fr 0.9fr; } }
+
+    .card { background: var(--card); border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 1.25rem; }
+    .hint { color: var(--muted); line-height: 1.6; }
+
+    form { margin-top: 1rem; display:grid; gap: 0.85rem; }
+    label { font-weight: 700; }
+    input, textarea, select {
+      width: 100%; box-sizing: border-box; padding: 0.75rem; border-radius: 10px;
+      border: 1px solid #d1d5db; background: white; font-size: 1rem;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+
+    .list { margin-top: 0.75rem; border-top: 1px solid #e5e7eb; padding-top: 0.75rem; }
+    .person { padding: 0.75rem 0; border-bottom: 1px solid #eef2f7; }
+    .person strong { display:block; }
+    .person .meta { color: var(--muted); font-size: 0.95rem; margin-top: 0.15rem; }
+
+    button {
+      background: #215350; color: white; border: none; padding: 0.85rem 1rem;
+      border-radius: 12px; font-weight: 800; cursor: pointer;
+    }
+    button:hover { filter: brightness(1.05); }
+
+    footer { background: var(--ink); color: white; text-align: center; padding: 2rem 1rem; }
+    footer a { color:#cfe8ff; text-decoration:none; font-weight:700; }
+
+    .moderation { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius: 12px; padding: 0.9rem 1rem; margin-top: 1rem; }
+    code { background:#f3f4f6; padding: 0.15rem 0.35rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="headwrap">
+    <img class="logo" src="assets/gba-logo-clean2.png" alt="GBA logo" />
+    <div class="headtxt">
+      <h1>GBA Family</h1>
+      <p>
+        This page is a tribute to the people who worked at Grillage Beton & Associates.
+        Former colleagues are invited to add their names and the years they were part of the GBA family.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid">
+
+    <div class="card">
+      <h2 style="margin-top:0">Add Your Name</h2>
+      <p class="hint">
+        Please submit your name, role, and years at GBA. Submissions will be reviewed by the family before being added to the public list.
+      </p>
+
+      <!--
+        HOW TO ENABLE SUBMISSIONS:
+        - Google Forms: easiest. Create a form and set this page to link to it, or replace this form action.
+        - Formspree: set action="https://formspree.io/f/xxxxxx".
+        - Airtable/Tally: embed their form.
+      -->
+
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="e.g., Sara Mohammadi" />
+
+        <label for="role">Role / Department (optional)</label>
+        <input id="role" name="role" placeholder="e.g., Site Engineer, Accounting, Supervisor" />
+
+        <label for="years">Years at GBA (optional)</label>
+        <input id="years" name="years" placeholder="e.g., 1999–2006" />
+
+        <label for="note">Short note (optional)</label>
+        <textarea id="note" name="note" placeholder="A short message or memory…"></textarea>
+
+        <label for="publish">Display preference</label>
+        <select id="publish" name="publish" required>
+          <option value="">Select…</option>
+          <option>Show full name</option>
+          <option>Show initials only</option>
+          <option>Keep private (family only)</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="moderation">
+        <strong>Note:</strong> This is a static website. To receive submissions, connect the form to a service.
+        Replace <code>action="#"</code> with your endpoint.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Listed Members</h2>
+      <p class="hint">This list will be populated as former colleagues submit their details.</p>
+
+      <div class="list" id="memberList">
+        <!-- Example entries (remove or keep as placeholders) -->
+        <div class="person">
+          <strong>(Example) Reza A.</strong>
+          <div class="meta">Site supervisor • 1996–2001</div>
+        </div>
+        <div class="person">
+          <strong>(Example) Maryam S.</strong>
+          <div class="meta">Office administration • 2002–2008</div>
+        </div>
+      </div>
+
+      <p class="hint" style="margin-top:0.9rem;">
+        Tip: For a fully automated list, we can connect submissions to a Google Sheet and display approved entries.
+        (That requires a small script; still compatible with static hosting.)
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="company.html">Projects</a> •
+    <a href="jamshid-shahabi.html">Founder Biography</a> •
+    <a href="memories.html">Leave a Memory</a>
+  </p>
+</footer>
+
+</body>
+</html>

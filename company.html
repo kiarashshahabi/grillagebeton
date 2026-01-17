@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grillage Beton & Associates – Projects</title>
+  <style>
+    :root { --ink:#215350; --ink2:#3b6967; --bg:#f6f7f8; --card:#ffffff; --muted:#5f6b72; --accent:#9fc6c4; }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: #222; }
+
+    header { background: linear-gradient(135deg, var(--ink), #113c35); color: white; padding: 2.1rem 1.25rem; }
+    .headwrap { max-width: 1100px; margin: 0 auto; display:flex; align-items:center; gap: 1rem; }
+    .logo { width: 240px; max-width: 55vw; height: auto; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 0.35rem 0.6rem; }
+    .headtxt { flex:1; }
+    .headtxt h1 { margin: 0; font-size: 2rem; }
+    .headtxt p { margin: 0.6rem 0 0; opacity: 0.95; line-height: 1.6; }
+    @media (max-width: 720px){ .headwrap{ flex-direction: column; align-items: flex-start; } .logo{ width: 220px; } }
+
+    nav { max-width: 1100px; margin: 0.9rem auto 0; padding: 0 1.25rem; display:flex; flex-wrap:wrap; gap:0.75rem; }
+    nav a { color: #d6f3f1; text-decoration:none; font-weight:700; border:1px solid rgba(214,243,241,0.35); padding:0.35rem 0.6rem; border-radius:999px; }
+    nav a:hover { background: rgba(214,243,241,0.12); }
+
+    section { max-width: 1100px; margin: 2.25rem auto; padding: 0 1.25rem; }
+    h2 { border-left: 4px solid var(--ink); padding-left: 1rem; margin-bottom: 1rem; }
+    .note { color: var(--muted); margin-top: -0.25rem; line-height: 1.5; }
+
+    table { width: 100%; border-collapse: collapse; background: var(--card); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-radius: 10px; overflow: hidden; }
+    th, td { padding: 0.9rem; border-bottom: 1px solid #e5e7eb; text-align: left; }
+    th { background: #eef3f3; font-weight: 700; }
+    tr:hover td { background: #f6fbfb; cursor: pointer; }
+
+    .pill { display:inline-block; font-size: 0.85rem; padding: 0.2rem 0.6rem; border-radius: 999px; background:#e8f2f1; color:#0f4f49; margin-left:0.5rem; }
+
+    footer { background: var(--ink); color: white; text-align: center; padding: 2rem 1rem; }
+    footer a { color:#cfe8ff; text-decoration:none; font-weight:700; }
+
+    /* Modal */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; padding: 1rem; }
+    .modal-content { background: white; max-width: 920px; width: 100%; border-radius: 12px; padding: 1.5rem 1.5rem 1rem; max-height: 90vh; overflow-y: auto; }
+    .modal-head { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
+    .close { font-size: 1.75rem; cursor: pointer; line-height: 1; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin: 0.25rem 0 0.75rem; }
+    .modal-content img { width: 100%; border-radius: 10px; margin-top: 0.75rem; border: 1px solid #eef2f7; }
+    .imggrid { display:grid; grid-template-columns: 1fr; gap: 0.75rem; }
+    @media (min-width: 820px) { .imggrid { grid-template-columns: 1fr 1fr; } }
+
+    .assets-tip { background:#f0fbfa; border:1px solid #bfe5e1; border-radius: 10px; padding: 0.85rem 1rem; color:#0f4f49; }
+    code { background:#f3f4f6; padding: 0.15rem 0.35rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="headwrap">
+    <img class="logo" src="assets/gba-logo-clean2.png" alt="Grillage Beton & Associates logo" />
+    <div class="headtxt">
+      <h1>Grillage Beton &amp; Associates</h1>
+      <p>
+        Founded in March 1978 (Co. Reg. No. 31488), <strong>Grillage Beton &amp; Associates (GBA)</strong> was an Iranian civil engineering and construction company active in reinforced-concrete buildings, urban infrastructure, drainage systems, and flood-control tunnels.
+        <br><br>
+        Under the founding and management of <strong>Eng. Jamshid Shahabi</strong>, GBA delivered public-service projects across Tehran and other regions of Iran for more than three decades.
+      </p>
+    </div>
+  </div>
+  
+</header>
+
+
+
+
+
+<section id="drainage">
+  <h2>Selected Projects</h2>
+  <p class="note">This page summarizes representative projects documented in the official company archive. Projects are listed by category and in reverse chronological order.</p>
+
+  <h2>Drainage, Tunnels & Flood Control Projects</h2>
+  <p class="note">Listed in reverse chronological order (latest first). Click any row to view archived details and photographs.</p>
+  <table>
+    <tr><th>Project</th><th>Location</th><th>Year</th></tr>
+    <tr onclick="openModal('azadegan')"><td>Azadegan Drainage & Tunnel Works <span class="pill">Details pending</span></td><td>Tehran</td><td>2018</td></tr>
+    <tr onclick="openModal('d2b')"><td>Tunnel D2 &amp; Tunnel B <span class="pill">Details pending</span></td><td>Tehran</td><td>2016–2017</td></tr>
+    <tr onclick="openModal('d21')"><td>D.21 EPC Drainage Project (Designer: Gueno Co.) <span class="pill">Incomplete</span></td><td>Tehran</td><td>2014–2015</td></tr>
+    <tr onclick="openModal('ehsan')"><td>Ehsan Tunnel (Tunnel D)</td><td>Tehran</td><td>2013</td></tr>
+    <tr onclick="openModal('tirandaz')"><td>Tirandaz Flood-water Control Tunnel</td><td>Tehran</td><td>2008</td></tr>
+    <tr onclick="openModal('damavandbakhtar')"><td>Damavand Bridge Tunnel &amp; Completion of Bakhtar Channel</td><td>Tehran</td><td>2007</td></tr>
+    <tr onclick="openModal('ganjavi')"><td>Ganjavi Tunnel (Takhti Avenue)</td><td>Tehran</td><td>2006</td></tr>
+    <tr onclick="openModal('velenjak2006')"><td>Velenjak Channel – Construction &amp; Completion</td><td>Tehran</td><td>2006</td></tr>
+    <tr onclick="openModal('velenjak')"><td>West Velenjak Flood-water Control</td><td>Tehran</td><td>2004</td></tr>
+    <tr onclick="openModal('golab')"><td>Golab Darreh Flood-water Canal &amp; Reservoir</td><td>Tehran (Tajrish)</td><td>2004</td></tr>
+    <tr onclick="openModal('khayam')"><td>Khayam Sub-Tunnels (Bokharayee / Aboosayeed / 15 Khordad)</td><td>Tehran</td><td>2003–2004</td></tr>
+    <tr onclick="openModal('fairy')"><td>Fairy Park Drainage Channel, Ramps &amp; Footbridges</td><td>Tehran</td><td>1995</td></tr>
+  </table>
+</section>
+
+<section id="building">
+  <h2>Building Construction Projects</h2>
+  <p class="note">Listed in reverse chronological order (latest first). Click any row to view archived details and photographs.</p>
+  <table>
+    <tr><th>Project</th><th>Location</th><th>Year</th></tr>
+    <tr onclick="openModal('navvab')"><td>Navvab Commercial / Administrative Center</td><td>Tehran</td><td>1998</td></tr>
+    <tr onclick="openModal('bookcity')"><td>Shahr-e-Ketab (Book City) & Municipality Computer Center</td><td>Tehran</td><td>1995</td></tr>
+    <tr onclick="openModal('pious')"><td>Pious Foundation Headquarters (Design &amp; Construction)</td><td>Sari</td><td>1990</td></tr>
+    <tr onclick="openModal('kangan')"><td>Residential Buildings for Kangan Gas Refinery</td><td>Jam (Bushehr Province)</td><td>1990</td></tr>
+    <tr onclick="openModal('civilaviation')"><td>Residential Apartment Buildings for Civil Aviation</td><td>Tehran</td><td>1989</td></tr>
+  </table>
+</section>
+
+<section id="early">
+  <h2>Early Years (1978–1980s)</h2>
+  <p class="note">Company introduction and early reinforced-concrete civil works (high volume of projects documented in the archive).</p>
+  <table>
+    <tr><th>Entry</th><th>Location</th><th>Years</th></tr>
+    <tr onclick="openModal('early')"><td>Company Introduction &amp; Early Works <span class="pill">Archive page</span></td><td>Iran</td><td>1978–1980s</td></tr>
+  </table>
+</section>
+
+<section class="assets-tip">
+  <strong>Image folder:</strong> place the scanned archive PNGs in <code>assets/</code> next to this HTML file.
+  If you keep the filenames used below, the project pop-ups will show the correct images.
+</section>
+
+<footer>
+  <p>
+    <a href="jamshid-shahabi.html">Founder Biography</a> •
+    <a href="memories.html">Leave a Memory</a> •
+    <a href="gba-family.html">GBA Family</a>
+  </p>
+  <p style="margin-top:0.6rem; font-size:0.95rem; opacity:0.9;">
+    Company registration documents:
+    <a href="assets/gba-registration-first.pdf" target="_blank">First Registration</a> •
+    <a href="assets/gba-registration-last.pdf" target="_blank">Final Registration</a>
+  </p>
+  <p style="margin-top:0.6rem; font-size:0.85rem; opacity:0.75;">
+    This archive website was created in <strong>2026</strong>.
+  </p>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <div>
+        <h3 id="m-title" style="margin:0"></h3>
+        <div id="m-meta" class="meta"></div>
+      </div>
+      <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <div id="m-text" style="line-height:1.6"></div>
+    <div id="m-imgs" class="imggrid"></div>
+  </div>
+</div>
+
+<script>
+  const data = {
+    azadegan: {
+      title: 'Azadegan Drainage & Tunnel Works',
+      meta: 'Tehran • 2018',
+      text: `Final drainage and tunnel works undertaken by GBA toward the end of operations. Detailed contractual documentation is still being reviewed and will be added when available.`,
+      imgs: []
+    },
+    d2b: {
+      title: 'Tunnel D2 & Tunnel B',
+      meta: 'Tehran • 2016–2017',
+      text: `Construction works related to Tunnel D2 and Tunnel B. Further technical details and drawings will be added once contract records are finalized.`,
+      imgs: []
+    },
+    d21: {
+      title: 'D.21 EPC Drainage Project (Designer: Gueno Company)',
+      meta: 'Tehran • 2014–2015',
+      text: `EPC drainage project with Gueno Company as designer. The project remained incomplete due to financing interruptions from the municipality.`,
+      imgs: []
+    },
+
+    early: {
+      title: 'Early Years (1978–1980s) – Company Introduction',
+      meta: 'Founded March 1978 • Co. Reg. No. 31488',
+      text: `From the company introduction pages: Grillage Beton & Associates was founded in March 1978 with a focus on reinforced-concrete civil development and construction projects, emphasizing quality, qualified personnel, and disciplined project management.`,
+      imgs: ['assets/page-03-introduction.png', 'assets/page-02-contents.png']
+    },
+
+    // Building projects (from the first resume archive)
+    civilaviation: {
+      title: 'Residential Apartment Buildings for Civil Aviation',
+      meta: 'Tehran • 1989',
+      text: `Residential apartment buildings constructed for Civil Aviation staff in Tehran.`,
+      imgs: ['assets/p-24-civil-aviation.png']
+    },
+    kangan: {
+      title: 'Residential Buildings for Kangan Gas Refinery',
+      meta: 'Jam (Bushehr Province) • 1990',
+      text: `Residential buildings constructed for the Kangan Gas Refinery housing complex.`,
+      imgs: ['assets/p-20-kangan.png']
+    },
+    pious: {
+      title: 'Pious Foundation Headquarters (Design & Construction)',
+      meta: 'Sari • 1990',
+      text: `Design and construction of the commercial and residential building for the National Reconstruction Cash Office and Pious Foundation.`,
+      imgs: ['assets/p-23-pious-foundation.png']
+    },
+    bookcity: {
+      title: 'Shahr-e-Ketab (Book City) & Municipality Computer Center',
+      meta: 'Tehran • 1995',
+      text: `Construction of the Book City and Municipality Computer Center building in Tehran.`,
+      imgs: ['assets/p-18-book-city-photo.png', 'assets/p-19-book-city-specs.png']
+    },
+    navvab: {
+      title: 'Navvab Commercial / Administrative Center',
+      meta: 'Tehran • 1998',
+      text: `Construction of the Navvab commercial / administrative center in Tehran.`,
+      imgs: ['assets/p-16-navvab.png']
+    },
+
+    // Drainage / tunnels (from the archive PDFs)
+    khayam: {
+      title: 'Khayam Sub-Tunnels (Bokharayee / Aboosayeed / 15 Khordad)',
+      meta: 'Tehran • 2003–2004',
+      text: `Urban drainage tunnel works to alleviate flooding in central Tehran.`,
+      imgs: ['assets/p-04-khayam-map-and-sections.png']
+    },
+    velenjak: {
+      title: 'West Velenjak Flood-water Control',
+      meta: 'Tehran • 2004',
+      text: `Flood-water pool and pipeline/tunnel system constructed for flood prevention in West Velenjak.`,
+      imgs: ['assets/p-09-velenjak-pool-and-pipeline.png']
+    },
+    velenjak2006: {
+      title: 'Velenjak Channel – Construction & Completion',
+      meta: 'Tehran (Modares Highway → Mirdamad Boulevard) • 2006',
+      text: `Archive summary: construction & completion of the Velenjak channel.
+Length: 390 m culvert and 540 m channel. Duration: 12 months.
+Project specs: excavation 4,250 m³ • ironware 323 tons • concrete 4,720 m³.`,
+      imgs: ['assets/velenjak-cover-2006.png', 'assets/velenjak-details-2006.png']
+    },
+    ganjavi: {
+      title: 'Ganjavi Tunnel (Takhti Avenue)',
+      meta: 'Tehran • 2006',
+      text: `Archive summary: construction of an oval-shaped concrete tunnel on Takhti Avenue.
+Length: 587 m • Max width: 160 cm • Max height: 215 cm. Duration: 12 months.
+Project specs: excavation 4,500 m³ • ironware 250 tons • concrete 2,000 m³.`,
+      imgs: ['assets/ganjavi-cover-2006.png', 'assets/ganjavi-details-2006.png']
+    },
+    damavandbakhtar: {
+      title: 'Damavand Bridge Tunnel & Completion of Bakhtar Channel',
+      meta: 'Damavand Avenue • 2007',
+      text: `Archive summary: construction of the Damavand bridge tunnel and completion of the Bakhtar channel.
+Length (tunnel): 412 m • Length (completion channel): 166 m. Duration: 22 months.
+(From the archive cover: Damavand tunnel max 300×250 cm; Bakhtar channel max 550×500 cm.)`,
+      imgs: ['assets/damavand-bakhtar-cover-2007.png', 'assets/damavand-bakhtar-details-2007.png']
+    },
+    golab: {
+      title: 'Golab Darreh Flood-water Canal & Reservoir',
+      meta: 'Tehran (Tajrish) • 2004',
+      text: `Flood-water canal and reservoir works in Golab Darreh, including canal, basin, and associated structures (per archive pages).`,
+      imgs: ['assets/p-12-golab-specs.png', 'assets/p-13-golab-reservoir-views.png', 'assets/p-14-golab-channel-views.png']
+    },
+    fairy: {
+      title: 'Fairy Park Drainage Channel, Ramps & Footbridges',
+      meta: 'Tehran • 1995',
+      text: `Construction of Fairy Park drainage channel, ramps, and footbridges (Darakeh river continuation).`,
+      imgs: ['assets/p-15-fairy-park.png']
+    },
+    tirandaz: {
+      title: 'Tirandaz Flood-water Control Tunnel',
+      meta: 'Tehran • 2008',
+      text: `Tirandaz flood-water control tunnel (as documented in the 2008 project page).`,
+      imgs: ['assets/p-08-tirandaz.png']
+    },
+    ehsan: {
+      title: 'Ehsan Tunnel (Tunnel D)',
+      meta: 'Tehran • 2013',
+      text: `Ehsan tunnel (Tunnel D) with documented project specifications and photos from the archive.`,
+      imgs: ['assets/p-10-ehsan.png']
+    }
+  };
+
+  function openModal(key) {
+    const p = data[key];
+    document.getElementById('m-title').textContent = p.title;
+    document.getElementById('m-meta').textContent = p.meta || '';
+    document.getElementById('m-text').textContent = p.text || '';
+
+    const imgs = document.getElementById('m-imgs');
+    imgs.innerHTML = '';
+    (p.imgs || []).forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = p.title;
+      imgs.appendChild(img);
+    });
+
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave a Memory – Grillage Beton & Associates</title>
+  <style>
+    :root { --ink:#215350; --bg:#f6f7f8; --card:#ffffff; --muted:#5f6b72; }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: #222; }
+    header { background: linear-gradient(135deg, var(--ink), #113c35); color: white; padding: 2.1rem 1.25rem; }
+    .headwrap { max-width: 980px; margin: 0 auto; display:flex; align-items:center; gap: 1rem; }
+    .logo { width: 220px; max-width: 55vw; height: auto; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 0.35rem 0.6rem; }
+    .headtxt h1 { margin: 0; font-size: 1.9rem; }
+    .headtxt p { margin: 0.6rem 0 0; opacity: 0.95; line-height: 1.6; max-width: 720px; }
+    @media (max-width: 720px){ .headwrap{ flex-direction: column; align-items: flex-start; } }
+
+    main { max-width: 980px; margin: 2.25rem auto; padding: 0 1.25rem 2.5rem; }
+    .card { background: var(--card); border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 1.25rem; }
+    .hint { color: var(--muted); line-height: 1.6; }
+
+    form { margin-top: 1rem; display:grid; gap: 0.85rem; }
+    label { font-weight: 700; }
+    input, textarea, select {
+      width: 100%; box-sizing: border-box; padding: 0.75rem; border-radius: 10px;
+      border: 1px solid #d1d5db; background: white; font-size: 1rem;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .row { display:grid; gap: 0.85rem; }
+    @media (min-width: 820px){ .row { grid-template-columns: 1fr 1fr; } }
+
+    button {
+      background: #215350; color: white; border: none; padding: 0.85rem 1rem;
+      border-radius: 12px; font-weight: 800; cursor: pointer;
+    }
+    button:hover { filter: brightness(1.05); }
+
+    footer { background: var(--ink); color: white; text-align: center; padding: 2rem 1rem; }
+    footer a { color:#cfe8ff; text-decoration:none; font-weight:700; }
+
+    .moderation { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius: 12px; padding: 0.9rem 1rem; margin-top: 1rem; }
+    code { background:#f3f4f6; padding: 0.15rem 0.35rem; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="headwrap">
+    <img class="logo" src="assets/gba-logo-clean2.png" alt="GBA logo" />
+    <div class="headtxt">
+      <h1>Leave a Memory</h1>
+      <p>
+        If you worked with Grillage Beton & Associates, partnered on a project, or simply knew Eng. Jamshid Shahabi,
+        you are warmly invited to share a short memory.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <p class="hint">
+      Your message will be reviewed by the family before publishing (to keep the memorial respectful and spam‑free).
+      If you prefer, you can also include contact details so the family can follow up.
+    </p>
+
+    <!--
+      HOW TO ENABLE SUBMISSIONS (choose one):
+      1) Google Forms: create a Google Form and replace the <form action="..."> with your Form POST URL.
+      2) Formspree: create a Formspree endpoint and set action to it (example: https://formspree.io/f/xxxxxx)
+      3) Tally.so: embed their form iframe instead of this form.
+
+      Until you set an action, this form will not send anywhere.
+    -->
+
+    <form action="#" method="POST">
+      <div class="row">
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" required placeholder="e.g., Ali Rezaei" />
+        </div>
+        <div>
+          <label for="relation">Your relation to GBA</label>
+          <select id="relation" name="relation" required>
+            <option value="">Select…</option>
+            <option>Employee</option>
+            <option>Partner / Contractor</option>
+            <option>Client</option>
+            <option>Consultant / Engineer</option>
+            <option>Friend / Family</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="years">Years connected (optional)</label>
+          <input id="years" name="years" placeholder="e.g., 1998–2004" />
+        </div>
+        <div>
+          <label for="contact">Contact (optional)</label>
+          <input id="contact" name="contact" placeholder="email or phone" />
+        </div>
+      </div>
+
+      <div>
+        <label for="message">Your memory / message</label>
+        <textarea id="message" name="message" required placeholder="Share a short memory, lesson, or message…"></textarea>
+      </div>
+
+      <div>
+        <label for="publish">Publishing preference</label>
+        <select id="publish" name="publish" required>
+          <option value="">Select…</option>
+          <option>Ok to publish publicly</option>
+          <option>Ok to publish with initials only</option>
+          <option>Please keep private (family only)</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit memory</button>
+    </form>
+
+    <div class="moderation">
+      <strong>Note:</strong> To activate submissions on a static site, connect this form to a service.
+      Recommended: Google Forms (free) or Formspree.
+      Replace <code>action="#"</code> with your endpoint.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="company.html">Projects</a> •
+    <a href="jamshid-shahabi.html">Founder Biography</a> •
+    <a href="gba-family.html">GBA Family</a>
+  </p>
+</footer>
+
+</body>
+</html>
