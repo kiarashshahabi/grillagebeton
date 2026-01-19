@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثبت یادداشت / خاطره – گریلـیج بتن و همکاران</title>
+  <style>
+    :root { --ink:#215350; --bg:#f6f7f8; --card:#ffffff; --muted:#5f6b72; }
+    body { font-family: Tahoma, "Vazirmatn", "IRANSans", Arial, sans-serif; margin: 0; background: var(--bg); color: #222; }
+    header { background: linear-gradient(135deg, var(--ink), #113c35); color: white; padding: 2.1rem 1.25rem; }
+    .headwrap { max-width: 980px; margin: 0 auto; display:flex; align-items:center; gap: 1rem; }
+    .logo { width: 220px; max-width: 55vw; height: auto; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 0.35rem 0.6rem; }
+    .headtxt h1 { margin: 0; font-size: 1.9rem; }
+    .headtxt p { margin: 0.6rem 0 0; opacity: 0.95; line-height: 1.9; max-width: 740px; }
+    @media (max-width: 720px){ .headwrap{ flex-direction: column; align-items: flex-start; } }
+
+    .lang { max-width: 980px; margin: 0.9rem auto 0; padding: 0 1.25rem; display:flex; gap:0.75rem; }
+    .lang a { color: #d6f3f1; text-decoration:none; font-weight:700; border:1px solid rgba(214,243,241,0.35); padding:0.35rem 0.8rem; border-radius:999px; }
+    .lang a:hover { background: rgba(214,243,241,0.12); }
+
+    main { max-width: 980px; margin: 2.25rem auto; padding: 0 1.25rem 2.5rem; }
+    .card { background: var(--card); border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 1.25rem; }
+    .hint { color: var(--muted); line-height: 1.9; }
+
+    .btn {
+      display:inline-block; background: #215350; color: white; text-decoration:none;
+      padding: 0.85rem 1rem; border-radius: 12px; font-weight: 800;
+    }
+    .btn:hover { filter: brightness(1.05); }
+
+    .note { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius: 12px; padding: 0.9rem 1rem; margin-top: 1rem; line-height: 1.9; }
+    code { background:#f3f4f6; padding: 0.15rem 0.35rem; border-radius: 6px; }
+
+    footer { background: var(--ink); color: white; text-align: center; padding: 2rem 1rem; }
+    footer a { color:#cfe8ff; text-decoration:none; font-weight:700; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="headwrap">
+    <img class="logo" src="assets/gba-logo-clean2.png" alt="لوگوی گریلـیج بتن و همکاران" />
+    <div class="headtxt">
+      <h1>ثبت یادداشت / خاطره</h1>
+      <p>
+        اگر در گذشته با شرکت گریلـیج بتن و همکاران همکاری داشته‌اید، در پروژه‌ای همراه بوده‌اید،
+        یا مهندس جمشید شهابی را می‌شناختید، خوشحال می‌شویم یادداشت یا خاطره‌ای کوتاه ثبت کنید.
+        پیام‌ها پس از بررسی خانواده، در صورت اجازه شما منتشر خواهند شد.
+      </p>
+    </div>
+  </div>
+  <div class="lang">
+    <a href="index.html">صفحه اصلی</a>
+    <a href="company.html">English</a>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <p class="hint">
+      برای جلوگیری از پیام‌های نامرتبط و حفظ شأن یادبود، ثبت پیام از طریق یک فرم انجام می‌شود.
+      شما می‌توانید مشخص کنید پیام به‌صورت عمومی منتشر شود یا صرفاً برای خانواده باقی بماند.
+    </p>
+
+    <!--
+      اتصال فرم:
+      1) لینک فرم گوگل را در href دکمه زیر قرار دهید.
+      2) (اختیاری) اگر بعداً خواستید فرم داخل همین صفحه باشد، می‌توانیم فرم را به صورت iframe نیز قرار دهیم.
+
+      مقدار زیر را با لینک واقعی فرم جایگزین کنید:
+      GOOGLE_FORM_LINK_HERE
+    -->
+
+    <p style="margin: 1.1rem 0 0;">
+      <a class="btn" href="GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">ثبت پیام در فرم</a>
+    </p>
+
+    <div class="note">
+      <strong>راهنما:</strong> پس از ساخت فرم در Google Forms، لینک «ارسال» را در کُد این صفحه جایگزین کنید.
+      جایگزین دقیق: <code>GOOGLE_FORM_LINK_HERE</code>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="index.html">پروژه‌ها</a> •
+    <a href="jamshid-shahabi-fa.html">زندگینامه بنیان‌گذار</a> •
+    <a href="gba-family-fa.html">خانواده GBA (همکاران)</a>
+  </p>
+</footer>
+
+</body>
+</html>
