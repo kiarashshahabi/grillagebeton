@@ -3,142 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>زندگینامه مهندس جمشید شهابی</title>
+  <title>شرکت گریلـیج بتن (سهامی خاص) – پروژه‌ها</title>
   <style>
     :root { --ink:#215350; --bg:#f6f7f8; --card:#ffffff; --muted:#5f6b72; }
-    body { font-family: Tahoma, "Vazirmatn", "IRANSans", Arial, sans-serif; margin:0; background:var(--bg); color:#222; }
 
-    header { background: linear-gradient(135deg, var(--ink), #113c35); color:#fff; padding: 2.1rem 1.25rem; }
-    .headwrap { max-width: 1050px; margin: 0 auto; display:flex; align-items:center; gap:1rem; }
-    .logo { width: 220px; max-width: 55vw; height:auto; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 0.35rem 0.6rem; }
-    .headtxt { flex:1; }
-    .headtxt h1 { margin:0; font-size: 2rem; }
-    .headtxt p { margin: 0.55rem 0 0; opacity:0.95; line-height:1.9; }
-    @media (max-width: 720px){ .headwrap{ flex-direction:column; align-items:flex-start; } .logo{ width: 205px; } }
-
-    .nav { max-width: 1050px; margin: 0.9rem auto 0; padding: 0 1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap; }
-    .nav a { color:#d6f3f1; text-decoration:none; font-weight:800; border:1px solid rgba(214,243,241,0.35); padding:0.35rem 0.8rem; border-radius:999px; }
-    .nav a:hover { background: rgba(214,243,241,0.12); }
-
-    main { max-width: 1050px; margin: 2.25rem auto; padding: 0 1.25rem 2.5rem; }
-    .grid { display:grid; grid-template-columns: 1fr; gap: 1.25rem; }
-    @media (min-width: 980px){ .grid { grid-template-columns: 1.1fr 0.9fr; } }
-
-    .card { background: rgba(255,255,255,0.95); border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 1.25rem; }
-    h2 { margin:0 0 0.9rem; border-right: 4px solid var(--ink); padding-right: 1rem; }
-
-    .bio { line-height: 2.05; font-size: 1.03rem; }
-    .bio p { margin: 0 0 0.9rem; }
-
-    /* Summary */
-    .summary { display:grid; gap: 0.7rem; }
-    .row { display:grid; grid-template-columns: 155px 1fr; gap: 0.6rem 0.9rem; padding: 0.65rem 0; border-bottom: 1px solid #eef2f7; }
-    .row:last-child { border-bottom: none; }
-    .k { color: var(--muted); font-weight: 800; }
-    .v { line-height: 1.9; }
-
-    /* Photo frames */
-    .photos { display:grid; grid-template-columns: 1fr; gap: 0.9rem; }
-    @media (min-width: 600px){ .photos { grid-template-columns: 1fr 1fr; } }
-    .frame {
-      border: 2px dashed rgba(33,83,80,0.35);
-      border-radius: 16px;
-      background: #f7fbfb;
-      min-height: 220px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding: 1rem;
-      color: #1f4b47;
-      line-height: 1.9;
-      font-weight: 800;
+    body{
+      font-family: Tahoma, "Vazirmatn", "IRANSans", Arial, sans-serif;
+      margin:0; background:var(--bg); color:#222; position:relative;
     }
-    .frame small { display:block; font-weight: 700; color: rgba(31,75,71,0.8); margin-top: 0.35rem; }
-    .frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
 
-    footer { background: var(--ink); color:#fff; text-align:center; padding: 2rem 1rem; }
-    footer a { color:#cfe8ff; text-decoration:none; font-weight:800; }
+    /* Watermark (cover collage) */
+    body::before{
+      content:""; position:fixed; inset:0;
+      background:url('assets/gba-cover-collage.png') no-repeat center 10vh;
+      background-size:min(1100px, 95vw);
+      opacity:0.06; pointer-events:none; z-index:-1;
+      filter: grayscale(10%);
+    }
+
+    header{ background: linear-gradient(135deg, var(--ink), #113c35); color:#fff; padding: 2.1rem 1.25rem; }
+    .headwrap{ max-width: 1100px; margin:0 auto; display:flex; align-items:center; gap:1rem; }
+    .logo{ width:240px; max-width:55vw; height:auto; background:rgba(255,255,255,0.92); border-radius:10px; padding:0.35rem 0.6rem; }
+    .headtxt{ flex:1; }
+    .headtxt h1{ margin:0; font-size:2rem; }
+    .headtxt p{ margin:0.6rem 0 0; opacity:0.96; line-height:1.95; }
+    @media (max-width:720px){ .headwrap{ flex-direction:column; align-items:flex-start; } .logo{ width:220px; } }
+
+    .nav{ max-width:1100px; margin:0.9rem auto 0; padding:0 1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap; }
+    .nav a{ color:#d6f3f1; text-decoration:none; font-weight:800; border:1px solid rgba(214,243,241,0.35); padding:0.35rem 0.8rem; border-radius:999px; }
+    .nav a:hover{ background:rgba(214,243,241,0.12); }
+
+    section{ max-width:1100px; margin:2.25rem auto; padding:0 1.25rem 2.5rem; }
+    h2{ border-right:4px solid var(--ink); padding-right:1rem; margin:2.25rem 0 1rem; }
+    h2:first-of-type{ margin-top:0; }
+    .note{ color:var(--muted); margin-top:-0.25rem; line-height:1.9; }
+
+    table{ width:100%; border-collapse:collapse; background:rgba(255,255,255,0.95);
+      box-shadow:0 8px 20px rgba(0,0,0,0.08); border-radius:10px; overflow:hidden; }
+    th, td{ padding:0.9rem; border-bottom:1px solid #e5e7eb; text-align:right; }
+    th{ background:#eef3f3; font-weight:800; }
+    tr:hover td{ background:#f6fbfb; cursor:pointer; }
+
+    .pill{ display:inline-block; font-size:0.85rem; padding:0.2rem 0.6rem; border-radius:999px; background:#e8f2f1; color:#0f4f49; margin-right:0.5rem; }
+
+    /* Early section layout */
+    .early{ display:grid; grid-template-columns:1fr; gap:1.25rem; align-items:start; }
+    @media (min-width:920px){ .early{ grid-template-columns:1.05fr 0.95fr; } }
+    .card{ background:rgba(255,255,255,0.95); border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.08); padding:1.1rem; }
+    .archive-img{ width:100%; border-radius:12px; border:1px solid #e5e7eb; }
+    .facts{ line-height:2.05; }
+    .facts .big{ font-weight:900; }
+
+    footer{ background:var(--ink); color:#fff; text-align:center; padding:2rem 1rem; }
+    footer a{ color:#cfe8ff; text-decoration:none; font-weight:800; }
+
+    /* Modal */
+    .modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; padding:1rem; }
+    .modal-content{ background:#fff; max-width:920px; width:100%; border-radius:12px; padding:1.5rem 1.5rem 1rem; max-height:90vh; overflow-y:auto; }
+    .modal-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
+    .close{ font-size:1.75rem; cursor:pointer; line-height:1; }
+    .meta{ color:var(--muted); font-size:0.95rem; margin:0.25rem 0 0.75rem; line-height:1.8; }
+    .imggrid{ display:grid; grid-template-columns:1fr; gap:0.75rem; }
+    @media (min-width:820px){ .imggrid{ grid-template-columns:1fr 1fr; } }
+    .modal-content img{ width:100%; border-radius:10px; border:1px solid #eef2f7; }
   </style>
 </head>
 <body>
 
 <header>
   <div class="headwrap">
-    <img class="logo" src="assets/gba-logo.png" alt="لوگوی شرکت گریلـیج بتن" />
+    <img class="logo" src="assets/gba-logo.png" alt="لوگوی گریلـیج بتن " />
     <div class="headtxt">
-      <h1>مهندس جمشید شهابی</h1>
-      <p>یادبود و زندگینامه بنیان‌گذار شرکت گریلـیج بتن</p>
+      <h1>شرکت گریلـیج بتن و همکاران (با مسئولیت محدود) <span style="font-weight:600; font-size:0.85em; opacity:0.95;">GBA</span></h1>
+      <p>
+        شرکت گریلـیج بتن در فروردین ماه سال ۱۳۵۷ با مشارکت در انجام پروژه‌های مختلف عمرانی مملکت تحت شماره ۳۱۴۸۸ ثبت رسیده است.
+        حضور فعال مدیران مجرب در رأس پروژه‌ها و اعتقاد به انجام کار سالم و فنی از اصول همواره مبنای فکری مدیران شرکت در انجام وظایف و مسئولیت‌ها و تعهدات محول شده است که کلیه پروژه‌های انجام شده شرکت را با بالاترین کیفیت و دقت لازم به انجام برساند و رضایت کامل کارفرمایان پروژه‌ها را جلب نماید.
+        <br><br>
+        این شرکت افتخار دارد که در طول حدود <strong>۴۰</strong> سال فعالیت خود در بخش‌های مختلف سازندگی کشور حضور چشمگیر داشته و حاصل این فعالیت به‌صورت خلاصه در صفحات بعدی منعکس گردیده است.
+        <br><br>
+        
+      </p>
     </div>
   </div>
   <div class="nav">
     <a href="index.html">صفحه اصلی</a>
+    <a href="jamshid-shahabi-fa.html">زندگینامه</a>
     <a href="memories-fa.html">ثبت یادداشت / خاطره</a>
     <a href="company.html">English</a>
   </div>
 </header>
 
-<main>
-  <div class="grid">
+<section>
+  <p class="note">برای مشاهده جزئیات و تصاویر بایگانی‌شده، روی هر ردیف کلیک کنید.</p>
 
+  <h2>پروژه های انتقال آب</h2>
+  <table>
+    <tr><th>عنوان پروژه</th><th>مکان</th><th>سال</th></tr>
+    <tr onclick="openModal('azadegan')"><td>آزادگان<span class="pill">جزئیات در دست تکمیل</span></td><td>تهران</td><td>۱۳۹۷</td></tr>
+    <tr onclick="openModal('d2b')"><td>تونل D2 و تونل B <span class="pill">جزئیات در دست تکمیل</span></td><td>تهران</td><td>۱۳۹۵–۱۳۹۶</td></tr>
+    <tr onclick="openModal('d21')"><td>پروژه EPC D.21 (طراح: شرکت Gueno) <span class="pill">ناتمام</span></td><td>تهران</td><td>۱۳۹۳–۱۳۹۴</td></tr>
+    <tr onclick="openModal('ehsan')"><td>تونل احسان (Tunnel D)</td><td>تهران</td><td>۱۳۹۲</td></tr>
+    <tr onclick="openModal('tirandaz')"><td>تونل تیرانداز</td><td>تهران</td><td>۱۳۸۷</td></tr>
+    <tr onclick="openModal('damavandbakhtar')"><td>تونل پل دماوند و تکمیل کانال باختر</td><td>تهران</td><td>۱۳۸۶</td></tr>
+    <tr onclick="openModal('ganjavi')"><td>تونل گنجوی</td><td>تهران</td><td>۱۳۸۵</td></tr>
+    <tr onclick="openModal('velenjak2006')"><td>سیل گیر ولنجک</td><td>تهران</td><td>۱۳۸۵</td></tr>
+    <tr onclick="openModal('golab')"><td>سیل گیر گلابدره</td><td>تهران</td><td>۱۳۸۳</td></tr>
+    <tr onclick="openModal('khayam')"><td>سرشاخه های تونل خیام</td><td>تهران</td><td>۱۳۸۲–۱۳۸۳</td></tr>
+    <tr onclick="openModal('fairy')"><td>کانال پارک نمایشگاهی</td><td>تهران</td><td>۱۳۷۴</td></tr>
+  </table>
+
+  <h2>پروژه های ساختمان</h2>
+  <table>
+    <tr><th>عنوان پروژه</th><th>مکان</th><th>سال</th></tr>
+    <tr onclick="openModal('navvab')"><td>نوسازی نواب</td><td>تهران</td><td>۱۹۹۸</td></tr>
+    <tr onclick="openModal('bookcity')"><td>ساختمان مرکزی شهر کتاب</td><td>تهران</td><td>۱۹۹۵</td></tr>
+    <tr onclick="openModal('kangan')"><td>خانه سازی پالایشگاه گاز کنگان</td><td>جم (بوشهر)</td><td>۱۹۹۰</td></tr>
+    <tr onclick="openModal('pious')"><td>ساختمان اداری سازمان اوقاف</td><td>ساری</td><td>۱۹۹۰</td></tr>
+    <tr onclick="openModal('civilaviation')"><td>مجتمع مسکونی سازمان صنایع هواپیمایی کشور</td><td>تهران</td><td>۱۹۸۹</td></tr>
+  </table>
+
+  <h2>دوره آغاز فعالیت – اجرای پروژه‌های اسکلت بتنی</h2>
+  <div class="early">
     <div class="card">
-      <h2>زندگینامه</h2>
-      <div class="bio">
-        <p>مهندس جمشید شهابی در تهران متولد شد و در خانواده‌ای پنج‌فرزندی پرورش یافت. والدین ایشان، فاطمه و محمدعلی شهابی، اصالتاً اهل شهمیرزاد از استان سمنان بودند.</p>
-        <p>او در سال ۱۳۴۵ وارد دانشکده فنیِ دانشگاه تهران شد و در رشتهٔ مهندسی عمران (راه و ساختمان) تحصیل کرد. مهندس شهابی از نسل مهندسانی بود که آموزش آکادمیک را با رویکردی عمل‌گرا و مسئولانه در خدمت توسعهٔ کشور به‌کار گرفتند.</p>
-        <p>در اسفند ۱۳۵۶ / مارس ۱۹۷۸، وی شرکت گریلیج بتن را بنیان‌گذاری کرد و طی بیش از چهار دهه، در طراحی، اجرا و مدیریت پروژه‌های عمرانی، به‌ویژه در حوزهٔ سازه‌های بتن‌آرمه، زیرساخت‌های شهری، زهکشی و کنترل سیلاب نقش مؤثری ایفا نمود.</p>
-        <p>مهندس جمشید شهابی از سال ۱۳۵۵ زندگی مشترک خود را با همسرشان خانم مینو‌ش آغاز کرد. او پدر کیارش و گلنوش بود و از سال ۲۰۱۴ افتخار پدربزرگی را تجربه کرد.</p>
-        <p>وی در تاریخ ۱۵ دسامبر ۲۰۲۲ (۲۵ آذر ۱۴۰۱) درگذشت. یاد او به‌عنوان مهندسی متعهد، بنیان‌گذار حرفه‌ای و دانش‌آموختهٔ شایستهٔ دانشکده فنی دانشگاه تهران گرامی است.</p>
+      <div class="facts">
+        <p style="margin-top:0"><span class="big">۱۳۵۷–۱۳۶۷</span></p>
+        <p>اجرای بیش از <span class="big">۹۰۰</span> پروژه اسکلت بتنی با سقف تیرچه بلوک در نقاط مختلف کشور</p>
+        <p><span class="big">سطح زیر بنای کل پروژه‌ها:</span> ۸۷۰٬۰۰۰ متر مربع</p>
+        <p><span class="big">مصرف بتن:</span> بیش از ۲۰۰٬۰۰۰ متر مکعب</p>
+        <p class="note" style="margin-bottom:0">(مطابق سند بایگانی شرکت – تصویر صفحه در سمت مقابل.)</p>
       </div>
     </div>
-
     <div>
-      <div class="card">
-        <h2>تصاویر</h2>
-        <div class="photos">
-          <div class="frame">
-            تصویر پرتره
-            <small>بعداً فایل را جایگزین کنید: <code>assets/jamshid-portrait.jpg</code></small>
-          </div>
-          <div class="frame">
-            تصویر کارت ملی / شناسنامه
-            <small>بعداً فایل را جایگزین کنید: <code>assets/jamshid-id.jpg</code></small>
-          </div>
-        </div>
-        <p style="margin:0.9rem 0 0; color:var(--muted); line-height:1.9;">
-          نکته: وقتی تصاویر آماده شد، کافی است همین دو فایل را داخل پوشه <code>assets/</code> قرار دهید.
-          اگر نام فایل‌ها را دقیقاً مطابق متن بالا بگذارید، بدون تغییر کُد نمایش داده می‌شوند.
-        </p>
-      </div>
-
-      <div class="card" style="margin-top:1.25rem;">
-        <h2>خلاصه</h2>
-        <div class="summary">
-          <div class="row"><div class="k">تولد</div><div class="v">تهران • ۱۱ اسفند ۱۳۲۶ (۱ مارس ۱۹۴۸)</div></div>
-          <div class="row"><div class="k">اصالت</div><div class="v">شهمیرزاد، استان سمنان</div></div>
-          <div class="row"><div class="k">تحصیلات</div><div class="v">دانشکده فنی دانشگاه تهران • مهندسی عمران (راه و ساختمان) • ورودی ۱۳۴۵</div></div>
-          <div class="row"><div class="k">تأسیس شرکت</div><div class="v">اسفند ۱۳۵۶ / مارس ۱۹۷۸</div></div>
-          <div class="row"><div class="k">همسر</div><div class="v">خانم مینو‌ش • ازدواج: ۱۳۵۵</div></div>
-          <div class="row"><div class="k">فرزندان</div><div class="v">کیارش • گلنوش</div></div>
-          <div class="row"><div class="k">نوه</div><div class="v">از سال ۲۰۱۴</div></div>
-          <div class="row"><div class="k">درگذشت</div><div class="v">۱۵ دسامبر ۲۰۲۲ (۲۵ آذر ۱۴۰۱)</div></div>
-        </div>
-      </div>
+      <img class="archive-img" src="assets/early-1357-1367.png" alt="بایگانی: ۱۳۵۷–۱۳۶۷ / بیش از ۹۰۰ پروژه" />
     </div>
-
   </div>
-</main>
+</section>
 
 <footer>
   <p>
     <a href="index.html">پروژه‌ها</a> •
+    <a href="jamshid-shahabi-fa.html">زندگینامه بنیان‌گذار</a> •
     <a href="memories-fa.html">ثبت یادداشت / خاطره</a> •
     <a href="company.html">English</a>
+  </p>
+  <p style="margin-top:0.6rem; font-size:0.95rem; opacity:0.9; line-height:1.8;">
+    اسناد ثبت شرکت:
+    <a href="assets/gba-registration-first.pdf" target="_blank">ثبت اولیه</a> •
+    <a href="assets/gba-registration-last.pdf" target="_blank">ثبت نهایی</a>
   </p>
   <p style="margin-top:0.6rem; font-size:0.85rem; opacity:0.75;">
     این وب‌سایت بایگانی در سال <strong>۲۰۲۶</strong> ایجاد شده است.
   </p>
 </footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <div>
+        <h3 id="m-title" style="margin:0"></h3>
+        <div id="m-meta" class="meta"></div>
+      </div>
+      <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <div id="m-text" style="line-height:1.9"></div>
+    <div id="m-imgs" class="imggrid"></div>
+  </div>
+</div>
+
+<script>
+  const data = {
+    azadegan: { title:' تونل آزادگان ', meta:'تهران • ۲۰۱۸', text:'جزئیات فنی و قراردادی پس از تکمیل بررسی اسناد افزوده خواهد شد.', imgs:[] },
+    d2b: { title:'تونل D2 و تونل B', meta:'تهران • ۲۰۱۶–۲۰۱۷', text:'اطلاعات تکمیلی پس از نهایی شدن اسناد قراردادی اضافه می‌شود.', imgs:[] },
+    d21: { title:' EPC D.21 ( با مشارکت Gueno)', meta:'تهران • ۲۰۱۴–۲۰۱۵', text:'این پروژه به دلیل توقف تأمین مالی از سوی شهرداری به‌صورت ناتمام باقی ماند.', imgs:[] },
+
+    ehsan: { title:'تونل احسان (Tunnel D)', meta:'تهران • ۲۰۱۳', text:'مطابق صفحات بایگانی پروژه.', imgs:['assets/p-10-ehsan.png'] },
+    tirandaz: { title:'تونل تیرانداز', meta:'تهران • ۲۰۰۸', text:'مطابق صفحه بایگانی.', imgs:['assets/p-08-tirandaz.png'] },
+    damavandbakhtar: { title:'تونل پل دماوند و تکمیل کانال باختر', meta:'تهران • ۲۰۰۷', text:'مطابق خلاصه بایگانی.', imgs:['assets/damavand-bakhtar-cover-2007.png','assets/damavand-bakhtar-details-2007.png'] },
+    ganjavi: { title:'تونل گنجوی', meta:'تهران • ۲۰۰۶', text:'مطابق خلاصه بایگانی.', imgs:['assets/ganjavi-cover-2006.png','assets/ganjavi-details-2006.png'] },
+    velenjak2006: { title:'سیل گیر ولنجک', meta:'تهران • ۲۰۰۶', text:'مطابق صفحات بایگانی.', imgs:['assets/velenjak-cover-2006.png','assets/velenjak-details-2006.png'] },
+    golab: { title:'سیل گیر گلابدره', meta:'تهران • ۲۰۰۴', text:'مطابق صفحات بایگانی.', imgs:['assets/p-12-golab-specs.png','assets/p-13-golab-reservoir-views.png','assets/p-14-golab-channel-views.png'] },
+    khayam: { title:'سرشاخه های تونل خیام', meta:'تهران • ۲۰۰۳–۲۰۰۴', text:'مطابق صفحات بایگانی.', imgs:['assets/p-04-khayam-map-and-sections.png'] },
+    fairy: { title:'کانال پارک نمایشگاهی', meta:'تهران • ۱۹۹۵', text:'مطابق صفحات بایگانی.', imgs:['assets/p-15-fairy-park.png'] },
+
+    navvab: { title:'نوسازی نواب', meta:'تهران • ۱۹۹۸', text:'مطابق صفحات بایگانی.', imgs:['assets/p-16-navvab.png'] },
+    bookcity: { title:'ساختمان مرکزی شهر کتاب', meta:'تهران • ۱۹۹۵', text:'مطابق صفحات بایگانی.', imgs:['assets/p-18-book-city-photo.png','assets/p-19-book-city-specs.png'] },
+    kangan: { title:'خانه سازی پالایشگاه گاز کنگان', meta:'جم (بوشهر) • ۱۹۹۰', text:'مطابق صفحات بایگانی.', imgs:['assets/p-20-kangan.png'] },
+    pious: { title:'ساختمان اداری سازمان اوقاف', meta:'ساری • ۱۹۹۰', text:'مطابق صفحات بایگانی.', imgs:['assets/p-23-pious-foundation.png'] },
+    civilaviation: { title:'مجتمع مسکونی سازمان صنایع هواپیمایی کشور', meta:'تهران • ۱۹۸۹', text:'مطابق صفحات بایگانی.', imgs:['assets/p-24-civil-aviation.png'] }
+  };
+
+  function openModal(key){
+    const p = data[key];
+    document.getElementById('m-title').textContent = p.title;
+    document.getElementById('m-meta').textContent = p.meta || '';
+    document.getElementById('m-text').textContent = p.text || '';
+
+    const imgs = document.getElementById('m-imgs');
+    imgs.innerHTML = '';
+    (p.imgs || []).forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = p.title;
+      imgs.appendChild(img);
+    });
+
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeModal(){ document.getElementById('modal').style.display = 'none'; }
+</script>
 
 </body>
 </html>
